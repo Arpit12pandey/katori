@@ -9,7 +9,7 @@ export default function Navbar() {
     }
     return (
         <>
-            <div className=' flex justify-between items-center'>
+            <div className=' flex justify-evenly gap-3 items-center'>
                 {/* LOGO */}
                 <Link to={'/'} className="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 384 512" className='w-6 h-6'>
@@ -69,7 +69,7 @@ export default function Navbar() {
            </div>
 
                {/* NAVBAR List */}
-               <div className='flex items-center justify-between gap-4 m-2'>
+               <div className='flex items-center justify-evenly gap-4 m-2'>
                                 <div className='flex  space-between items-center gap-4'>
                                      <div className=' font-bold p-2 hover:text-red-500 transition cursor-pointer text-sm'>HOME</div>
                                      <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>STORIES</div>
