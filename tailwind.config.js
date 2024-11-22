@@ -12,7 +12,7 @@ export default {
       },
     },
     animation: {
-      slideInRight: 'slideInRight 1s ease-out forwards',
+      slideInRight: 'slideInRight 3s ease-out forwards',
     },
   },
   },

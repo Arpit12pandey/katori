@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom'
 export default function Products() {
   return (
     <>
-    <div>
-    <div className='flex justify-center items-center gap-7'>
+    <div className='animate-slideInRight'>
+    <div className='flex justify-center items-center gap-7 '>
     <Link  to={'/'} className='overflow-hidden rounded-xl '>
       <img src={DesiGhee} alt="DesiGhee Image" className='w-64 h-64 object-fit transition-transform  duration-300 hover:scale-110 ' />
       </Link>
