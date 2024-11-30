@@ -7,10 +7,11 @@ function App() {
 
   return (
     <>
-     
+     <div className='bg-gradient-to-b from-white to-yellow-100 '>
      <Navbar/>
      <Hero/>
      <Products/>
+     </div>
 
     </>
   )

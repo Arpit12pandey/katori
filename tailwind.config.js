@@ -14,6 +14,9 @@ export default {
     animation: {
       slideInRight: 'slideInRight 3s ease-out forwards',
     },
+    colors: {
+      customYellow: '#FFD700', 
+    },
   },
   },
   plugins: [],

@@ -1,13 +1,20 @@
 import React from 'react'
-import HeroImage from '../../assets/Heroimage.webp'
+import VideoFile from '../../assets/HeroVideo.mp4'
+import Logo from '../../assets/Logo.jpg'
 export default function Hero() {
   return (
     <>
       {/* //hero section image */}
-      <div className="relative w-full h-64">
-  <img src={HeroImage} alt="Hero section image" className="w-full h-full object-fit " />
-
-</div>
+      <div className="relative w-full h-screen">
+        <video
+          src={VideoFile}
+          className="w-full h-screen object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
                   {/* //specialities */}
                   <div className='flex justify-evenly space-between space-x-5 items-center m-10 shadow-xl animate-slideInRight'>
                     <div className='p-5 flex gap-4'>
