@@ -1,10 +1,13 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/Logo.jpg'
 import './Navbar.css'
+import Input from '../InputBar/Input'
+import { UserContext } from '../../UserContex'
 
 
 export default function Navbar() {
+const {isFocusednav,setIsFocusednav}=useContext(UserContext)
     const handleInputChange = () => {
 
     }
@@ -19,25 +22,12 @@ export default function Navbar() {
                     <span className="font-bold text-xl">Momma Foods</span>
                 </Link>
                 {/* //creating the searchbar */}
-                <div className='relative flex items-center'>
-                    <input type="text" placeholder='search....' onChange={handleInputChange}
-                        className="w-auto pl-10 pr-4 py-2  border border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
-                         <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="absolute left-3 w-5 h-5 text-gray-400"
-  ><path
-  fillRule="evenodd"
-  d="M10.5 3a7.5 7.5 0 105.673 13.124l4.518 4.518a.75.75 0 101.06-1.06l-4.518-4.518A7.5 7.5 0 0010.5 3zm0 1.5a6 6 0 104.243 10.243A6 6 0 0010.5 4.5z"
-  clipRule="evenodd"
-/></svg>
-                </div>
+               <Input intext="Search" width="auto" statev={isFocusednav} statef={setIsFocusednav}/>
                              {/* //Icons  and services */}
                              <div className='flex justify-between items-center gap-3'>
                                 {/* //profile icon */}
                                 <div className='flex gap-3'>
-                                <Link className='hover:text-red-500 transition'>
+                                <Link to={'/login'} className='hover:text-red-500 transition'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='w-6 h-6'><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z" className='w-6 h-6'/></svg>
                                 
                                 </Link>
@@ -45,14 +35,14 @@ export default function Navbar() {
                                 </div>
                                   {/* Delivery */}
                                 <div className='flex gap-3'>
-                                <Link className='hover:text-red-500 transition'>
+                                <Link  to={'/track'} className='hover:text-red-500 transition'>
                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className='w-6 h-6'><path d="M48 0C21.5 0 0 21.5 0 48L0 368c0 26.5 21.5 48 48 48l16 0c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L48 0zM416 160l50.7 0L544 237.3l0 18.7-128 0 0-96zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
                                                                  </Link>
                                  <div className="border-l border-gray-300"></div>
                                  </div>
                                  {/* //heart */}
                                  <div className='flex gap-3'>
-                                 <Link className='hover:text-red-500 transition'>
+                                 <Link  to={'/login'} className='hover:text-red-500 transition'>
                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='w-6 h-6'><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg>                                 
                                  </Link>
                                  <div className="border-l border-gray-300 w-6"></div>
@@ -73,7 +63,7 @@ export default function Navbar() {
                {/* NAVBAR List */}
                <div className='flex items-center justify-evenly gap-4 m-2'>
                                 <div className='flex  space-between items-center gap-4'>
-                                     <div className=' font-bold p-2 hover:text-red-500 transition cursor-pointer text-sm'>HOME</div>
+                                     <Link to={'/'} className=' font-bold p-2 hover:text-red-500 transition cursor-pointer text-sm'>HOME</Link>
                                      <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>STORIES</div>
                                      <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>FRESH DAIRY</div>
                                      <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>GHEE</div>

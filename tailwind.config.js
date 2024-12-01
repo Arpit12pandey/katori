@@ -15,7 +15,11 @@ export default {
       slideInRight: 'slideInRight 3s ease-out forwards',
     },
     colors: {
-      customYellow: '#FFD700', 
+      brown: {
+        light: '#d7b19d', // light brown
+        DEFAULT: '#a0522d', // saddle brown (default)
+        dark: '#654321', // dark brown
+      },
     },
   },
   },
