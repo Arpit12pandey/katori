@@ -13,22 +13,22 @@ const {isFocusednav,setIsFocusednav}=useContext(UserContext)
     }
     return (
         <>
-            <div className=' flex justify-evenly gap-3 items-center'>
+            <div className=' flex justify-evenly gap-3 items-center sticky top-0 bg-white  z-50'>
                 {/* LOGO */}
                 <Link to={'/'} className="flex items-center gap-1">
                     <div className=''>
-                        <img src={Logo} alt="Logo" className='w-16 h-16' />
+                        <img src={Logo} alt="Logo" className='w-16 h-12' />
                     </div>
-                    <span className="font-bold text-xl">Momma Foods</span>
+                    <span className="font-bold text-xl m-2">Momma Foods</span>
                 </Link>
                 {/* //creating the searchbar */}
                <Input intext="Search" width="auto" statev={isFocusednav} statef={setIsFocusednav}/>
                              {/* //Icons  and services */}
-                             <div className='flex justify-between items-center gap-3'>
+                             <div className='flex justify-between items-center gap-3 '>
                                 {/* //profile icon */}
                                 <div className='flex gap-3'>
                                 <Link to={'/login'} className='hover:text-red-500 transition'>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='w-6 h-6'><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z" className='w-6 h-6'/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='w-6 h-6'><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z" className='w-6 h-6' fill='blue'/></svg>
                                 
                                 </Link>
                                 <div className="border-l border-gray-300"></div>
@@ -36,14 +36,14 @@ const {isFocusednav,setIsFocusednav}=useContext(UserContext)
                                   {/* Delivery */}
                                 <div className='flex gap-3'>
                                 <Link  to={'/track'} className='hover:text-red-500 transition'>
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className='w-6 h-6'><path d="M48 0C21.5 0 0 21.5 0 48L0 368c0 26.5 21.5 48 48 48l16 0c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L48 0zM416 160l50.7 0L544 237.3l0 18.7-128 0 0-96zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className='w-6 h-6'><path d="M48 0C21.5 0 0 21.5 0 48L0 368c0 26.5 21.5 48 48 48l16 0c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L48 0zM416 160l50.7 0L544 237.3l0 18.7-128 0 0-96zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"fill='blue' /></svg>
                                                                  </Link>
                                  <div className="border-l border-gray-300"></div>
                                  </div>
                                  {/* //heart */}
                                  <div className='flex gap-3'>
                                  <Link  to={'/login'} className='hover:text-red-500 transition'>
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='w-6 h-6'><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg>                                 
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='w-6 h-6'><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" fill='red'/></svg>                                 
                                  </Link>
                                  <div className="border-l border-gray-300 w-6"></div>
                                  </div>
@@ -64,16 +64,11 @@ const {isFocusednav,setIsFocusednav}=useContext(UserContext)
                <div className='flex items-center justify-evenly gap-4 m-2'>
                                 <div className='flex  space-between items-center gap-4'>
                                      <Link to={'/'} className=' font-bold p-2 hover:text-red-500 transition cursor-pointer text-sm'>HOME</Link>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>STORIES</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>FRESH DAIRY</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>GHEE</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>HONEY</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>PICKLE</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>MUSTARD OIL</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>SPICES</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>PULSES</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>NAMKEEN</div>
-                                     <div className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>CULINARY PASTE</div>
+                                     <Link  to={'/vedicghee'} className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>VEDIC GHEE</Link>
+                                     <Link  to={'/cowghee'} className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>GHEE A2 COW</Link>
+                                     <Link  to={'/honey'}  className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>HONEY</Link>
+                                     <Link  to={'/shilajit'}  className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>SHILAJIT</Link>
+                                     <Link  to={'/peanutbutter'}  className=' font-bold hover:text-red-500 transition cursor-pointer text-sm'>PEANUT BUTTER</Link>
                                 </div>
                                 <div className='flex gap-4'>
                                     {/* //gift icon */}
