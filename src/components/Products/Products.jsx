@@ -11,7 +11,7 @@ export default function Products() {
   return (
     <>
     <div className='animate-slideInRight'>
-    <div className='flex justify-center items-center gap-7 '>
+    <div className='flex flex-col md:flex-row md:gap-6 gap-4 p-4 md:p-4 justify-center items-center'>
     <Link  to={'/'} className='overflow-hidden rounded-2xl '>
       <img src={DesiGhee} alt="DesiGhee Image" className='w-96 h-72 object-fit transition-transform  duration-300 hover:scale-110 ' />
       </Link>
@@ -22,7 +22,7 @@ export default function Products() {
       <img src={Honey} alt="DesiGhee Image" className='w-96 h-72 object-fit transition-transform  duration-300 hover:scale-110 ' />
       </Link>
       </div>
-      <div className='flex justify-center items-center gap-7 m-8'>
+      <div className='flex flex-col md:flex-row md:gap-6 gap-4 p-4 md:p-4 justify-center items-center'>
         
       <Link  to={'/'}className='overflow-hidden rounded-2xl '>
       <img src={Pulses} alt="DesiGhee Image" className='w-96 h-72 object-fit transition-transform  duration-300 hover:scale-110 ' />

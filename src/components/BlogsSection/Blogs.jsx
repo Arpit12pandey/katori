@@ -23,7 +23,7 @@ export default function Blogs() {
       </div>
 
       {/* Blog Cards Container */}
-      <div className="animate-slideInRight flex gap-3 justify-evenly mt-10 w-full max-w-6xl px-4">
+      <div className="animate-slideInRight flex flex-col md:flex-row gap-3 justify-evenly mt-10 w-full max-w-6xl px-4">
         <BlogCard />
         <BlogCard />
         <BlogCard />
