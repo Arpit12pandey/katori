@@ -9,7 +9,7 @@ import ProductsPage from './components/ProductsPage/ProductsPage';
 import ProdDescription from './components/ProdDescription/ProdDescription';
 import vedicGheeImg from './assets/VedicGhee.jpg'
 import Ghee3 from './assets/ghee3.jpg'
-import HoneyImg from './assets/honey.jpg'
+import HoneyImg from './assets/Honey.jpg'
 import ShilajitImg from './assets/Shilajit2.jpg'
 import ButterImg from './assets/PeanutButter.jpg'
 import GoldImg from './assets/NandlalGold.jpg'
