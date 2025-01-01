@@ -6,6 +6,15 @@ import LoginPage from './components/Login/LoginPage';
 import { UserContextProvider } from './UserContex';
 import TrackingPage from './components/Tracking/TrackingPage';
 import ProductsPage from './components/ProductsPage/ProductsPage';
+import ProdDescription from './components/ProdDescription/ProdDescription';
+import vedicGheeImg from './assets/VedicGhee.jpg'
+import Ghee3 from './assets/ghee3.jpg'
+import HoneyImg from './assets/honey.jpg'
+import ShilajitImg from './assets/Shilajit2.jpg'
+import ButterImg from './assets/PeanutButter.jpg'
+import GoldImg from './assets/NandlalGold.jpg'
+import {description} from './components/BlogsSection/Summaries'
+
 function App() {
  
 
@@ -23,6 +32,13 @@ function App() {
      <Route path="/honey" element={<ProductsPage name={"HONEY "}/>} />
      <Route path="/shilajit" element={<ProductsPage name={"SHILAJIT"}/>} />
      <Route path="/peanutbutter" element={<ProductsPage name={"PEANUT BUTTER"}/>} />
+     <Route path="/naturalgold" element={<ProductsPage name={"NATURAL GOLD"} />} />
+     <Route path="/gheedesc" element={<ProdDescription name={" VEDIC GHEE"} image={vedicGheeImg} description={description. VedicGhee}/>} />
+     <Route path="/honeydesc" element={<ProdDescription name={"HONEY"} image={Ghee3 }  description={description.Honey}/>} />
+     <Route path="/shilajitdesc" element={<ProdDescription name={"SHILAJIT"}   image={HoneyImg } description={description.Shilajit} />} />
+     <Route path="/butterdesc" element={<ProdDescription name={"PEANUT BUTTER"}  image={ShilajitImg} description={description. PeanutButter} />} />
+     <Route path="/cowgheedesc" element={<ProdDescription name={" COW A2 GHEE"} image={ButterImg} description={description.GheeA2Cow} />} />
+     <Route path="/golddesc" element={<ProdDescription name={"NATURAL GOLD"} image={GoldImg}  description={description.NaturalGold} />} />
      </Route>
      </Routes>
      </div>

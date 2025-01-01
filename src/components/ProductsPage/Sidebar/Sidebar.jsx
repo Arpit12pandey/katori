@@ -27,83 +27,86 @@ export default function Sidebar() {
     };
 
     return (
-        <>
-            <div className='w-96 p-4 '> {/* Increased width to 80 (20rem) */}
-                <div className='flex justify-between items-center gap-10'>
-                    {/* Filter and Clean All Buttons */}
-                    <div className='h-12 w-28 flex justify-center items-center text-red-500 rounded p-2 text-md bg-white border border-red-500 hover:bg-red-500 hover:text-white transition'>
-                        FILTER
-                    </div>
-                    <div className='text-md hover:text-red-500'>
-                        Clean All
-                    </div>
+        <div className='w-96 p-4'>
+            <div className='flex justify-between items-center gap-10'>
+                {/* Filter and Clean All Buttons */}
+                <div className='h-12 w-28 flex justify-center items-center text-red-500 rounded p-2 text-md bg-white border border-red-500 hover:bg-red-500 hover:text-white transition'>
+                    FILTER
                 </div>
-                {/* Grey Line */}
-                <div className='bg-gray-400 h-1 w-full max-w-7xl mx-auto mt-2'></div>
-                
-                {/* Weight Category List */}
-                <div className='mt-5 flex justify-between'>
-                    <h1 className='text-2xl font-bold'>Weight</h1>
-                    <button onClick={() => setwt(!wt)} className='text-2xl font-bold'>{wt ? "-" : "+"}</button>
+                <div
+                    onClick={() => {
+                        setSelectedCategories([]); 
+                        setSelectedCategoriesbr([]); 
+                    }}
+                    className='text-md hover:text-red-500 cursor-pointer'
+                >
+                    Clean All
                 </div>
-                
-                {/* Conditionally render checkboxes when wt is true */}
-                {wt && (
-                    <div className='mt-5'>
-                        <div className='mt-3'>
-                            {weightCategories.map((category, index) => (
-                                <div key={index}>
-                                    <div className='flex items-center'>
-                                        <input
-                                            type="checkbox"
-                                            id={category}
-                                            name={category}
-                                            value={category}
-                                            checked={selectedCategories.includes(category)} 
-                                            onChange={() => handleCheckboxChange(category)} 
-                                            className='m-2 h-6 w-6'
-                                        />
-                                        <label htmlFor={category} className='text-lg text-gray-500 hover:text-blue-500'>{category}</label>
-                                    </div>
-                                    <div className='bg-gray-200 h-1 w-full max-w-7xl mx-auto mt-2'></div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-                
-                 {/* Brand Category List */}
-                 <div className='mt-5 flex justify-between'>
-                    <h1 className='text-2xl font-bold'>Brands</h1>
-                    <button onClick={() => setbr(!br)} className='text-2xl font-bold'>{br ? "-" : "+"}</button>
-                </div>
-                
-                {/* Conditionally render checkboxes when br is true */}
-                {br && (
-                    <div className='mt-5'>
-                        <div className='mt-3'>
-                            {brandCategories.map((category, index) => (
-                                <div key={index}>
-                                    <div className='flex items-center'>
-                                        <input
-                                            type="checkbox"
-                                            id={category}
-                                            name={category}
-                                            value={category}
-                                            checked={selectedCategoriesbr.includes(category)} 
-                                            onChange={() => handleCheckboxChangeBr(category)}
-                                            className='m-2 h-6 w-6' 
-                                        />
-                                        <label htmlFor={category} className='text-lg text-gray-500 hover:text-blue-500'>{category}</label>
-                                    </div>
-                                    <div className='bg-gray-200 h-1 w-full max-w-7xl mx-auto mt-2'></div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-                
             </div>
-        </>
+            {/* Grey Line */}
+            <div className='bg-gray-400 h-1 w-full max-w-7xl mx-auto mt-2'></div>
+            
+            {/* Weight Category List */}
+            <div className='mt-5 flex justify-between'>
+                <h1 className='text-2xl font-bold'>Weight</h1>
+                <button onClick={() => setwt(!wt)} className='text-2xl font-bold'>{wt ? "-" : "+"}</button>
+            </div>
+            
+            {/* Conditionally render checkboxes when wt is true */}
+            {wt && (
+                <div className='mt-5'>
+                    <div className='mt-3'>
+                        {weightCategories.map((category, index) => (
+                            <div key={index}>
+                                <div className='flex items-center'>
+                                    <input
+                                        type="checkbox"
+                                        id={category}
+                                        name={category}
+                                        value={category}
+                                        checked={selectedCategories.includes(category)} 
+                                        onChange={() => handleCheckboxChange(category)} 
+                                        className='m-2 h-6 w-6'
+                                    />
+                                    <label htmlFor={category} className='text-lg text-gray-500 hover:text-blue-500'>{category}</label>
+                                </div>
+                                <div className='bg-gray-200 h-1 w-full max-w-7xl mx-auto mt-2'></div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+            
+            {/* Brand Category List */}
+            <div className='mt-5 flex justify-between'>
+                <h1 className='text-2xl font-bold'>Brands</h1>
+                <button onClick={() => setbr(!br)} className='text-2xl font-bold'>{br ? "-" : "+"}</button>
+            </div>
+            
+            {/* Conditionally render checkboxes when br is true */}
+            {br && (
+                <div className='mt-5'>
+                    <div className='mt-3'>
+                        {brandCategories.map((category, index) => (
+                            <div key={index}>
+                                <div className='flex items-center'>
+                                    <input
+                                        type="checkbox"
+                                        id={category}
+                                        name={category}
+                                        value={category}
+                                        checked={selectedCategoriesbr.includes(category)} 
+                                        onChange={() => handleCheckboxChangeBr(category)}
+                                        className='m-2 h-6 w-6' 
+                                    />
+                                    <label htmlFor={category} className='text-lg text-gray-500 hover:text-blue-500'>{category}</label>
+                                </div>
+                                <div className='bg-gray-200 h-1 w-full max-w-7xl mx-auto mt-2'></div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }

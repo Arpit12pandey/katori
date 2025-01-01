@@ -90,6 +90,7 @@ export default function Navbar() {
                         <Link to="/honey" className="font-bold hover:text-red-500" onClick={closeMenu}>HONEY</Link>
                         <Link to="/shilajit" className="font-bold hover:text-red-500" onClick={closeMenu}>SHILAJIT</Link>
                         <Link to="/peanutbutter" className="font-bold hover:text-red-500" onClick={closeMenu}>PEANUT BUTTER</Link>
+                        <Link to="/naturalgold" className="font-bold hover:text-red-500" onClick={closeMenu}>NANDLAL GOLD</Link>
                     </div>
                 </div>
                 <div className=' hidden lg:flex gap-4'>
