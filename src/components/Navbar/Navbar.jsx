@@ -36,9 +36,10 @@ export default function Navbar() {
                 </Link>
 
                 {/* Searchbar */}
-                <div className="w-full flex justify-center items-center lg:w-auto order-last lg:order-none mt-4 lg:mt-0">
+                 <div className="hidden lg:flex lg:w-auto lg:justify-center lg:items-center">
     <Input intext="Search" width="auto" statev={isFocusednav} statef={setIsFocusednav} />
 </div>
+   
 
 
                 {/* Icons and Services */}
