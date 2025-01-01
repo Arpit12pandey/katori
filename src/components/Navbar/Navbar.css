@@ -17,3 +17,6 @@ button {
     border: none;
     cursor: pointer;
 }
+.down {
+    flex-basis: 100%; /* Allows the search bar to take its own row */
+}
