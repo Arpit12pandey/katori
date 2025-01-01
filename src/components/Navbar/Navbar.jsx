@@ -36,7 +36,9 @@ export default function Navbar() {
                 </Link>
 
                 {/* Searchbar */}
-                <Input intext="Search" width="auto" statev={isFocusednav} statef={setIsFocusednav} />
+                <div className="w-full flex justify-center items-center mt-2">
+        <Input intext="Search" width="auto" statev={isFocusednav} statef={setIsFocusednav} />
+    </div>
 
                 {/* Icons and Services */}
                 <div className='flex justify-between items-center gap-3 '>
